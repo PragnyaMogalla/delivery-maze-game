@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Maze Game</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1> Delivery Route Game</h1>
+
+<select id="level" onchange="setLevel()">
+    <option value="1">Easy</option>
+    <option value="2">Medium</option>
+    <option value="3">Hard</option>
+    <option value="4">Extreme</option>
+</select>
+
+<p>Shortest Path: <span id="minSteps">-</span></p>
+<p>Your Steps: <span id="steps">0</span></p>
+<p>🚀 Finish in <span id="ruleSteps">-</span> steps to earn ⭐⭐⭐</p>
+
+<div id="maze"></div>
+
+<button onclick="generateMaze()">New Game</button>
+<button onclick="giveUp()">AI Solve</button>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>🎉 Delivery Completed!</h2>
+        <div id="finalStars" class="stars"></div>
+        <p id="finalMessage"></p>
+        <button onclick="closePopup()">Play Again</button>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
